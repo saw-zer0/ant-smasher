@@ -13,7 +13,6 @@ function getDistance(object1, object2) {
 
     return dist;
 }
-console.log(getDistance({ 'x': 10, 'y': 10 }, { 'x': 20, 'y': 20 }))
 
 function checkClickPosition(object1, object2) {
     let dist = getDistance(object1, object2);

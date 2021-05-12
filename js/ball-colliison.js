@@ -34,10 +34,8 @@ function BallCollision(canvas, noOfBalls = NOOFBALLS, width, height){
                 }
             };
             if(skip){continue;};
-            // let dx = getRandomPositiveOrNegative() * getRandom(0.5,4);
-            // let dy = getRandomPositiveOrNegative() * getRandom(0.5,4);
-            let dx = 1;
-            let dy = 1;
+            let dx = getRandomPositiveOrNegative() * getRandom(0.5,4);
+            let dy = getRandomPositiveOrNegative() * getRandom(0.5,4);
             let color = COLORS[Math.floor(getRandom(0,COLORS.length-1))];
             let id = i;
             const ball = new Ball(this.ctx, radius, x, y, dx, dy, color, id, this.image);
@@ -74,7 +72,7 @@ function BallCollision(canvas, noOfBalls = NOOFBALLS, width, height){
     this.init();
 };
 
-function Ball(ctx,radius = 30, x, y, dx = 1, dy = 1, color, id, img){
+function Ball(ctx,radius = 20, x, y, dx = 1, dy = 1, color, id, img){
     this.ctx = ctx;
     this.x = x;
     this.y = y;
