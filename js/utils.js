@@ -18,3 +18,9 @@ function checkClickPosition(object1, object2) {
     let dist = getDistance(object1, object2);
     return (dist < object2.radius + 10)
 }
+
+function getDirection(dx, dy){
+    return Math.floor(Math.atan2(dx, dy) * 360);
+}
+
+console.log(getDirection(1,1));
